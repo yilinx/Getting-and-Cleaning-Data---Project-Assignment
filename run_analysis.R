@@ -81,3 +81,10 @@ xdata.summary <- dcast(xdata.melt, Subject+Activity ~ variable, mean)   #dcast d
         
         
 head(xdata.summary)   #shows the head of the cleaned data
+
+#----------- Export tidy data ----------------------------------------------------------
+
+write.csv(xdata,"Mean-Sd Tidy Data.csv")    #creates a csv containing all the mean and std dev
+write.csv(xdata.summary,"Ave Tidy Data.csv")    #creates a csv containing tidy data set with the average of each variable for each activity and each subject
+
+-----------------------------------------------------------------------------------------
